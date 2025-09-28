@@ -1,12 +1,80 @@
 <app-header></app-header>
 @if(this.router.isActive('/', true) == false) {
-    {{test()}}
-    <a class="back" [routerLink]="['/']">Back</a>
+    <a [routerLink]="goPreviousPage()">Go to {{ getPreviousPageName() }}</a>
     <router-outlet></router-outlet>
 } @else {
     <div class="main">
         <a [routerLink]="['/Customers']">
-            Go to Route
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
+        </a>
+        <a [routerLink]="['/Customers']">
+            <img src="/customer.jpg" alt="customer portfolio" />
+            <p>Customer Portfolio</p>
         </a>
     </div>
 }
