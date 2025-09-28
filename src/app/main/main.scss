@@ -1,0 +1,39 @@
+.main {
+    display: grid;
+    
+    @if (600px > 0) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 600px) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    @media (min-width: 900px) {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    @media (min-width: 1200px) {
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+    gap: 2rem;
+    box-sizing: border-box;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 7%;
+
+    a {
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        font-size: 1.2rem;
+        width: 100%;
+        
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    }
+}
