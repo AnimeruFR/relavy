@@ -1,0 +1,12 @@
+<app-header></app-header>
+@if(this.router.isActive('/', true) == false) {
+    {{test()}}
+    <a class="back" [routerLink]="['/']">Back</a>
+    <router-outlet></router-outlet>
+} @else {
+    <div class="main">
+        <a [routerLink]="['/Customers']">
+            Go to Route
+        </a>
+    </div>
+}
