@@ -1,1 +1,13 @@
-<p>customer-portfolio works!</p>
+<div class="customer-portfolio">
+    <h1>Customer Portfolio</h1>
+
+    <div class="customer-list">
+        @for (customer of getCustomers(); track customer.id) {
+            <div class="customer-card">
+                <h2>{{ customer.name }}</h2>
+                <p>{{ customer.description }}</p>
+                <a [routerLink]="['/customers', customer.id]">View Portfolio</a>
+            </div>
+        }
+    </div>
+</div>

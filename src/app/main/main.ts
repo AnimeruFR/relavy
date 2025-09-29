@@ -33,9 +33,23 @@ export class Main {
 
   getPreviousPageName(): string | null {
     if (!this.previousUrl) return null;
+    console.log(this.previousUrl);
 
-    const route = this.router.config.find(r => `/${r.path}` === this.previousUrl);
-    return route?.data?.['pageName'] ?? this.previousUrl;
+    let urlPath = this.previousUrl.split(/[?#]/)[0];
+    let res = "";
+
+    const route = this.router.config.find(r => {
+      if (!r.path) return false;
+      const regexPath = '^/' + r.path.replace(/:[^/]+/g, '[^/]+') + '$';
+      return new RegExp(regexPath).test(urlPath);
+    });
+
+    console.log(this.previousUrl == '/');
+    if (this.previousUrl == '/') {
+      return 'Menu';
+    } else {
+      return route?.data?.['pageName'] ?? this.previousUrl;
+    }
   }
 
   private setCookie(name: string, value: string, days: number): void {

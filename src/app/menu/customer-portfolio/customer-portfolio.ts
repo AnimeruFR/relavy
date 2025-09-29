@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CustomerService } from '../../services/customers/customer-service';
 
 @Component({
   selector: 'app-customer-portfolio',
@@ -8,5 +9,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './customer-portfolio.scss'
 })
 export class CustomerPortfolio {
+  constructor(private customerService: CustomerService) {}
 
+  getCustomers() {
+    return this.customerService.getCustomers();
+  }
 }

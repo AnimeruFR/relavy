@@ -1,0 +1,19 @@
+<div class="customer-menu">
+    @if(this.customer) {
+        <div class="customer-details">
+            <h2>{{ customer.name }}</h2>
+            <p>Email&nbsp;: {{ customer.email }}</p>
+            <p>Téléphone&nbsp;: {{ customer.phone }}</p>
+            <p>Adresse&nbsp;: {{ customer.address }}</p>
+        </div>
+    } @else {
+        <div class="no-customer">
+            <p>Aucun client sélectionné.</p>
+        </div>
+    }
+    <div class="customer-actions">
+        @if(this.customer) {
+            <a [routerLink]="['/customers', customer.id, 'edit']">Éditer le client</a>
+        }
+    </div>
+</div>
